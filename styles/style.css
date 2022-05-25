@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: url("../images/background-tile.svg");
+}
+
+body > * {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+#logo {
+    margin: auto;
+    display: block;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: rgba(169, 169, 169, 0.95);
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+    display: flex;
+    box-shadow: 0px 3px 3px black;
+}
+
+nav div {
+    font-size: 2em;
+    background-color: darkgray;
+    border-left: solid black 1px;
+    border-right: solid black 1px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+nav div:hover {
+    background: slategray;
+}
+
+nav div:active {
+    background: darkslategray;
+}
+
+a:link, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+main {
+    margin: auto;
+    max-width: 960px;
+    height: 200vh;
+    border-left: solid black 1px;
+    border-right: solid black 1px;
+    background-color: rgba(211, 211, 211, 0.5);
+}
+
+footer {
+    font: 1em;
+    background: darkgray;
+    border-top: solid black 1px;
+    position: sticky;
+    bottom: 0px;
+}
