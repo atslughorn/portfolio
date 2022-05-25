@@ -19,7 +19,7 @@ body > * {
 nav {
     position: sticky;
     top: 0;
-    background-color: rgba(169, 169, 169, 0.95);
+    background-color: rgba(169, 169, 169, 0.97);
     border-top: solid black 1px;
     border-bottom: solid black 1px;
     display: flex;
@@ -54,7 +54,7 @@ main {
     height: 200vh;
     border-left: solid black 1px;
     border-right: solid black 1px;
-    background-color: rgba(211, 211, 211, 0.5);
+    background-color: rgba(211, 211, 211, 0.8);
 }
 
 footer {
