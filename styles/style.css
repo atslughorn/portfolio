@@ -69,6 +69,17 @@ main {
     padding: 10px
 }
 
+#languages {
+    padding: 20px;
+    width: 480px;
+    display: flex;
+}
+
+#languages img {
+    margin-right: 20px;
+    height: 100px;
+}
+
 footer {
     font: 1em;
     background: darkgray;
