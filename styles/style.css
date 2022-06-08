@@ -20,7 +20,7 @@ body > * {
 }
 
 header {
-    /* position: sticky; */
+    position: sticky;
     top: 0;
     background-color: rgba(169, 169, 169, 0.97);
     border-top: solid black 1px;
