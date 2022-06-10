@@ -5,33 +5,38 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="styles/style.css" rel="stylesheet">
-        <title>Charlie's Website</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <title>Charlie's Portfolio</title>
     </head>
     <body>
-        <header>
-            <p id="logo">Charlie's Portfolio</p>
+        <main>
             <nav>
-                <a href="#"><div>Home</div></a>
-                <a href="#"><div>About</div></a>
-                <a href="#"><div>Contact</div></a>
+                <a href="#about"><div>About</div></a>
+                <a href="#experience"><div>Experience</div></a>
+                <a href="#projects"><div>Projects</div></a>
+                <a href="#contact"><div>Contact</div></a>
             </nav>
-        </header>
 
-        <div>
-            <main>
-                <h1>About me</h1>
+            <div id="about">
+                <p id="heading">Charlie Thomas</p>
+                <p id="subheading">Software Developer</p>
                 <br>
-                <p>Description of myself</p>
-                <br><br>
-                <h3>Languages:</h3>
+                <p>Enthusiastic, hard-working, etc.</p> <!-- Todo -->
+            </div>
+
+            <div id="experience">
+                <h3>Languages</h3>
                 <div id="languages">
                     <img src="images/html5-logo.svg">
                     <img src="images/css3-logo.svg">
                     <img src="images/js-logo.svg">
                 </div>
-                <br><br>
-                <h3>Projects:</h3>
-                <div id="projects">
+            </div>
+
+            <div id="projects">
+                <h3>Projects</h3>
+                <div id="projectlinks">
                     <div>
                         <h4>Final project</h4>
                         <img>
@@ -53,8 +58,16 @@
                         <p>Basketball</p>
                     </div>
                 </div>
-            </main>
-        </div>
+            </div>
+
+            <div id="contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li>Email</li>
+                    <li>Phone</li>
+                    <li>Github</li>
+                </ul>
+            </div>
+        </main>
     </body>
-    <footer>Copyright pending</footer>
 </html>

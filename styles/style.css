@@ -8,65 +8,63 @@
 }
 
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: white;
 }
 
 body {
-    background: url("../images/background-tile.svg");
+    background: black;
 }
 
-body > * {
-    background: rgba(255, 255, 255, 0.8);
-}
-
-header {
-    position: sticky;
-    top: 0;
-    background-color: rgba(169, 169, 169, 0.97);
-    border-top: solid black 1px;
-    border-bottom: solid black 1px;
-    display: flex;
-    box-shadow: 0px 3px 3px black;
-}
-
-#logo {
-    font-size: 4em;
+main {
+    margin: 0 auto;
+    max-width: 1140px;
+    height: 200vh;
+    padding: 0 10px
 }
 
 nav {
-    margin-left: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1140px;
     display: flex;
+    justify-content: right;
 }
 
 nav div {
-    height: 100%;
-    padding: 0 20px;
-    font-size: 2em;
-    line-height: 2em;
+    padding: 20px 15px;
     vertical-align: middle;
     user-select: none;
 }
 
-header div:hover {
-    background: slategray;
-}
-
-header div:active {
+nav a:hover {
     background: darkslategray;
 }
 
-a:link, a:visited {
-    color: black;
+nav a:active {
+    background: slategray;
 }
 
-main {
-    margin: auto;
-    max-width: 960px;
-    height: 200vh;
-    border-left: solid black 1px;
-    border-right: solid black 1px;
-    background-color: rgba(211, 211, 211, 0.8);
-    padding: 10px
+a:link, a:visited {
+    color: white;
+}
+
+main > div {
+    padding-top: 40vh;
+    padding-bottom: 10vh;
+}
+
+#about {
+
+}
+
+#heading {
+    font-size: 4em;
+}
+
+#subheading {
+    font-size: 2em;
 }
 
 #languages {
@@ -80,28 +78,20 @@ main {
     height: 100px;
 }
 
-#projects {
+#projectlinks {
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
 }
 
-#projects div {
+#projectlinks div {
     margin-right: 20px;
     width: 150px;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 10px;
     padding: 10px;
 }
 
-#projects img {
+#projectlinks img {
     height: 100px;
-}
-
-footer {
-    font: 1em;
-    background: darkgray;
-    border-top: solid black 1px;
-    position: sticky;
-    bottom: 0px;
 }
