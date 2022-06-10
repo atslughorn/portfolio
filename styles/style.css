@@ -80,6 +80,24 @@ main {
     height: 100px;
 }
 
+#projects {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#projects div {
+    margin-right: 20px;
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#projects img {
+    height: 100px;
+}
+
 footer {
     font: 1em;
     background: darkgray;
