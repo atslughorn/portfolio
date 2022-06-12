@@ -113,5 +113,5 @@ let particles = []
 let lastFrame = 0
 
 drawBackground()
-generateParticles(100)
+generateParticles(500)
 requestAnimationFrame(tick)
