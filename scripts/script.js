@@ -8,11 +8,16 @@ class Particle {
     }
 
     tick(t) {
-        if (this.x < 0 || this.x > window.innerWidth || this.y < 0 || this.y > window.innerHeight) {
-            particles.splice(particles.indexOf(this), 1)
-        }
         this.x += this.vx * t
         this.y += this.vy * t
+        //Removes particles that are off the screen or very slow
+        if (   this.x < 0
+            || this.x > window.innerWidth
+            || this.y < 0
+            || this.y > window.innerHeight
+            || Math.sqrt(Math.pow(this.vx) + Math.pow(this.vy)) < 0.01) {
+            particles.splice(particles.indexOf(this), 1)
+        }
     }
 
     draw(ctx) {
