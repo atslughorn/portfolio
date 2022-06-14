@@ -65,7 +65,7 @@ a:link, a:visited {
 
 main > div {
     padding-top: 40vh;
-    padding-bottom: 10vh;
+    padding-bottom: 20vh;
 }
 
 #heading {
@@ -76,31 +76,42 @@ main > div {
     font-size: 2em;
 }
 
-#languages {
-    padding: 20px;
+#technologyIcons {
+    padding: 20px 10px;
     width: 480px;
     display: flex;
 }
 
-#languages img {
+#technologyIcons img {
     margin-right: 20px;
     height: 100px;
 }
 
 #projectlinks {
-    padding: 20px;
+    padding: 20px 10px;
     display: flex;
     flex-wrap: wrap;
 }
 
 #projectlinks div {
     margin-right: 20px;
-    width: 150px;
+    width: 200px;
     border: 1px solid white;
     border-radius: 10px;
     padding: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 #projectlinks img {
     height: 100px;
+}
+
+#contact img {
+    width: 1em;
+    margin-right: 0.2em;
+}
+
+#contact li {
+    display: flex;
+    align-items: center;
 }

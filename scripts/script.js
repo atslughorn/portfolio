@@ -1,21 +1,20 @@
 class Particle {
-    constructor(x, y, vx, vy) {
+    constructor(x, y, speed, angle) { //Zero degrees = right, 90 degrees = down
         this.x = x
         this.y = y
-        this.vx = vx
-        this.vy = vy
+        this.vx = speed * Math.cos(angle)
+        this.vy = speed * Math.sin(angle)
         this.r = 2
     }
 
     tick(t) {
         this.x += this.vx * t
         this.y += this.vy * t
-        //Removes particles that are off the screen or very slow
+        //Removes particles that are off the screen
         if (   this.x < 0
             || this.x > window.innerWidth
             || this.y < 0
-            || this.y > window.innerHeight
-            || Math.sqrt(Math.pow(this.vx) + Math.pow(this.vy)) < 0.01) {
+            || this.y > window.innerHeight) {
             particles.splice(particles.indexOf(this), 1)
         }
     }
@@ -33,7 +32,7 @@ function drawBackground() {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
     ctx.fillStyle = "black"
-    ctx.fillRect(0,0,window.innerWidth,window.innerHeight)
+    ctx.fillRect(0,0,window.innerWidth-1,window.innerHeight-1)
 }
 
 function joinParticles() {
@@ -73,40 +72,40 @@ function randInt(min, max) {
     return Math.floor(Math.random() * (max+1-min)) + min
 }
 
+function randomSpeed() {
+    return Math.random() * 6 + 1
+}
+
 function generateParticles(n) {
     //Fills the screen with particles
     for (let i=0; i<n; i++) {
-        particles.push(new Particle(randInt(0, window.innerWidth), randInt(0, window.innerHeight), randInt(-10, 10), randInt(-10, 10)))
+        particles.push(new Particle(randInt(0, window.innerWidth-1), randInt(0, window.innerHeight-1), randomSpeed(), Math.random()*360))
     }
 }
 
 function spawnParticle() {
     //Creates a particle at the edge of the screen
     let edge = randInt(0,4) //0=top, 1=bottom, 2=left, 3=right
-    let distanceAlongEdge = randInt(0, (edge <= 1) ? window.innerWidth : window.innerHeight)
-    let x, y, vx, vy
+    let distanceAlongEdge = randInt(0, (edge <= 1) ? window.innerWidth-1 : window.innerHeight-1)
+    let x, y, angle
     if (edge == 0) {
         x = distanceAlongEdge
         y = 0
-        vx = randInt(-10, 10)
-        vy = randInt(0, 10)
+        angle = Math.random() * 180
     } else if (edge == 1) {
         x = distanceAlongEdge
         y = window.innerHeight
-        vx = randInt(-10, 10)
-        vy = randInt(0, -10)
+        angle = Math.random() * -180
     } else if (edge == 2) {
         x = 0
         y = distanceAlongEdge
-        vx = randInt(0, 10)
-        vy = randInt(-10, 10)
+        angle = Math.random() * 180 - 90
     } else {
         x = window.innerWidth
         y = distanceAlongEdge
-        vx = randInt(0, -10)
-        vy = randInt(-10, 10)
+        angle = Math.random() * 180 + 90
     }
-    particles.push(new Particle(x, y, vx, vy))
+    particles.push(new Particle(x, y, randomSpeed(), angle))
 }
 
 let canvas = document.getElementById("background")
