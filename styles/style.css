@@ -78,12 +78,22 @@ main > div {
 
 #technologyIcons {
     padding: 20px 10px;
-    width: 480px;
+    /* width: 800px; */
     display: flex;
 }
 
-#technologyIcons img {
+#technologyIcons div {
     margin-right: 20px;
+    margin-bottom: 20px;
+    width: 125px;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+}
+
+#technologyIcons img {
     height: 100px;
 }
 
